@@ -21,7 +21,7 @@ From this point, we should install our application, but enabling admin is only p
 
 4.Set device admin:
  
-        adb shell dpm set-device-owner pl.snowdog.kiosk/.MyDeviceAdminReceiver
+        adb shell dpm set-device-owner com.example.kiosk/.MyDeviceAdminReceiver
 
 5.If everything has gone well we should be able to see our application in the list of device’s administrators in Settings → Security → Device admin apps.
 
@@ -31,7 +31,7 @@ From this point, we should install our application, but enabling admin is only p
 
 To remove app 
 
-                adb shell dpm remove-active-admin  pl.snowdog.kiosk/MyDeviceAdminReceiver
+                adb shell dpm remove-active-admin  com.example.kiosk/MyDeviceAdminReceiver
 
 To install App
 
