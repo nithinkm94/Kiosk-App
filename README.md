@@ -14,10 +14,15 @@ Then create a DeviceAdminReceiver.
 From this point, we should install our application, but enabling admin is only possible on devices which don’t have any users added. So before we install app we have to wipe device/factory reset if any Google accounts have been added:
 
 1.Wipe/Factory reset device
+
 2.Do not add Google account on the first start, just skip it
+
 3.Install our application with Android Studio or command line:  adb install path/to/kiosk.apk
+
 4.Set device admin:
+ 
         adb shell dpm set-device-owner pl.snowdog.kiosk/.MyDeviceAdminReceiver
+
 5.If everything has gone well we should be able to see our application in the list of device’s administrators in Settings → Security → Device admin apps.
 
 6 .We can also check if our application is device admin programmatically:
@@ -26,10 +31,11 @@ From this point, we should install our application, but enabling admin is only p
 
 To remove app 
 
-adb shell dpm remove-active-admin  pl.snowdog.kiosk/MyDeviceAdminReceiver
+                adb shell dpm remove-active-admin  pl.snowdog.kiosk/MyDeviceAdminReceiver
 
 To install App
-adb install -r path/to/kiosk.apk
+
+                adb install -r path/to/kiosk.apk
 
 
 SOURCE
